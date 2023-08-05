@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html,
+body {
+    background-color: #E2D0FB;
+    position: relative;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+	font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#app {
+	width: 375px;
+	height: 559px;
+	background-color: #8338ec;
+	border-radius: 10px;
+	overflow: scroll;
+}
+#app::-webkit-scrollbar{
+  display: none;
+}
+.search{
+	display: block;
+	margin: 10px 25px;
+	position: relative;
+}
+
+.search::after{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0,-50%);
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI1MC4zMTMgMjUwLjMxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjUwLjMxMyAyNTAuMzEzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI1NnB4IiBoZWlnaHQ9IjI1NnB4Ij4KPGcgaWQ9IlNlYXJjaCI+Cgk8cGF0aCBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7IiBkPSJNMjQ0LjE4NiwyMTQuNjA0bC01NC4zNzktNTQuMzc4Yy0wLjI4OS0wLjI4OS0wLjYyOC0wLjQ5MS0wLjkzLTAuNzYgICBjMTAuNy0xNi4yMzEsMTYuOTQ1LTM1LjY2LDE2Ljk0NS01Ni41NTRDMjA1LjgyMiw0Ni4wNzUsMTU5Ljc0NywwLDEwMi45MTEsMFMwLDQ2LjA3NSwwLDEwMi45MTEgICBjMCw1Ni44MzUsNDYuMDc0LDEwMi45MTEsMTAyLjkxLDEwMi45MTFjMjAuODk1LDAsNDAuMzIzLTYuMjQ1LDU2LjU1NC0xNi45NDVjMC4yNjksMC4zMDEsMC40NywwLjY0LDAuNzU5LDAuOTI5bDU0LjM4LDU0LjM4ICAgYzguMTY5LDguMTY4LDIxLjQxMyw4LjE2OCwyOS41ODMsMEMyNTIuMzU0LDIzNi4wMTcsMjUyLjM1NCwyMjIuNzczLDI0NC4xODYsMjE0LjYwNHogTTEwMi45MTEsMTcwLjE0NiAgIGMtMzcuMTM0LDAtNjcuMjM2LTMwLjEwMi02Ny4yMzYtNjcuMjM1YzAtMzcuMTM0LDMwLjEwMy02Ny4yMzYsNjcuMjM2LTY3LjIzNmMzNy4xMzIsMCw2Ny4yMzUsMzAuMTAzLDY3LjIzNSw2Ny4yMzYgICBDMTcwLjE0NiwxNDAuMDQ0LDE0MC4wNDMsMTcwLjE0NiwxMDIuOTExLDE3MC4xNDZ6IiBmaWxsPSIjRkZGRkZGIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+.search .search-input{
+	background-color: transparent;
+	border:0;
+	outline: none!important;
+	border-bottom: 2px solid rgba(256, 256, 256, 0.3);
+	color: #fff;
+	font-size: 16px;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.search .search-input::-webkit-input-placeholder{
+	color: rgba(256, 256, 256, 0.6);
+}
+
+.list {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.list .list-length {
+	display: block;
+	text-align: right;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 25px;
+	margin-bottom: 15px;
+}
+
+.list ul{
+	list-style: none;
+	display: block;
+	padding: 0;
+	margin: 0 25px;
+}
+
+.list ul li{
+	display: block;
+	padding: 15px;
+	margin-bottom: 10px;
+	background-color: #6677D7;
+	border-radius: 6px;
+	text-align: left;
+	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.1);
+	transform: translate(0,0);
+	transition: all .3s ease;
+}
+
+.list ul li:hover{
+	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.3);
+	transform: translate(0, -2px);
+	transition: all .3s ease;
+}
+
+.list ul li:last-child{
+	margin-bottom: 0;
+}
+
+.list ul li .user-image{
+	display: inline-block;
+	border-radius: 50%;
+	border: 3px solid #fff;
+	height: 35px;
+	width: 35px;
+	background-repeat: no-repeat;
+	background-size: 35px;
+	background-position: center;
+	box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.3);
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.list ul li .user-info{
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 70%;
+}
+
+.list ul li .user-name{
+	display: block;
+	font-size: 14px;
+	color: #fff;
+}
+
+.list ul li .view-repo{
+	padding: 0 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 6px;
+	background: #E99349;
+	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	float: right;
+	transition: opacity .3s ease;
+}
+
+.list ul li .view-repo:hover{
+	opacity: 0.8;
+	transition: opacity .3s ease;
+}
