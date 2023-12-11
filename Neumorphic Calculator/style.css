@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap");
+:root {
+  --body-bg-color: #e0e5ec;
+  --bg-color: #e0e5ec;
+  --primary-font-color: rgba(144,152,168,1);
+  --secondary-font-color: rgba(51,64,89,1);
+  --soft-high-light: rgba(255,255,255,.43);
+  --dark-high-light: rgba(217,210,200,.51);
+}
+
+[data-theme=dark] {
+  --bg-color: #131419;
+  --primary-font-color: #c7c7c7;
+  --secondary-font-color: #03a9f4;
+  --soft-high-light: rgba(255,255,255,.05);
+  --dark-high-light: rgba(0,0,0,.51);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--body-bg-color);
+  color: var(--primary-font-color);
+}
+
+.calculator {
+  background: var(--bg-color);
+  color: var(--primary-font-color);
+}
+
+.display {
+  box-shadow: 6px 6px 16px 0 var(--dark-high-light), -6px -6px 16px 0 var(--soft-high-light), inset 6px 6px 5px 0 var(--dark-high-light), inset -6px -6px 5px 0 var(--soft-high-light);
+  border: 5px solid var(--soft-high-light);
+  color: var(--secondary-font-color);
+}
+
+.neumorphic {
+  box-shadow: 6px 6px 16px 0 var(--dark-high-light), -6px -6px 16px 0 var(--soft-high-light);
+  border-radius: 50%;
+  transition: 0.1s all ease-in-out;
+  border: 1px solid var(--soft-high-light);
+}
+
+.neumorphic:hover {
+  box-shadow: inset 6px 6px 5px 0 var(--dark-high-light), inset -6px -6px 5px 0 var(--soft-high-light);
+  color: var(--secondary-font-color);
+}
+
+/*
+  GRID LAYOUT & NON NEUMORPHIC 
+*/
+body {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  font-family: "Odibee Sans";
+  font-size: 16px;
+}
+
+.display {
+  border-radius: 12px;
+  transition: 0.1s all ease-in-out;
+  height: 60px;
+  line-height: 60px;
+  text-align: right;
+  padding-right: 20px;
+  width: 100%;
+  font-size: 32px;
+  letter-spacing: 4px;
+}
+
+.calculator {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "toggle toggle toggle toggle" "display display display display" "c signed percent divide" "seven eight nine times" "four five six minus" "one two three plus" "zero zero decimal equals";
+  align-items: center;
+  justify-items: center;
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
+  border-radius: 20px;
+  padding: 50px 40px 40px 40px;
+}
+
+.c, .signed, .percent, .divide, .seven, .eight, .nine, .times, .four, .five, .six, .minus, .one, .two, .three, .plus, .zero, .decimal, .equals {
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+}
+
+.zero {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.toggle {
+  grid-area: toggle;
+}
+
+.display {
+  grid-area: display;
+}
+
+.c {
+  grid-area: c;
+}
+
+.signed {
+  grid-area: signed;
+}
+
+.percent {
+  grid-area: percent;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.times {
+  grid-area: times;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.plus {
+  grid-area: plus;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.decimal {
+  grid-area: decimal;
+}
+
+.equals {
+  grid-area: equals;
+}
+
+.toggle {
+  width: 100%;
+}
+
+.theme-switch-wrapper {
+  display: block;
+  float: right;
+  align-items: center;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  box-shadow: 6px 6px 16px 0 var(--dark-high-light), -6px -6px 16px 0 var(--soft-high-light), inset 6px 6px 5px 0 var(--dark-high-light), inset -6px -6px 5px 0 var(--soft-high-light);
+  background-color: inherit;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.slider:before {
+  background-color: var(--bg-color);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  bottom: 4px;
+  content: "";
+  height: 22px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 22px;
+}
+
+input:checked + .slider {
+  background-color: var(--bg-color);
+  box-shadow: 6px 6px 16px 0 var(--dark-high-light), -6px -6px 16px 0 var(--soft-high-light), inset 6px 6px 5px 0 var(--dark-high-light), inset -6px -6px 5px 0 var(--soft-high-light);
+}
+
+input:checked + .slider:before {
+  background-color: var(--secondary-font-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
